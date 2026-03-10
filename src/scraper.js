@@ -20,6 +20,7 @@ async function scrapeData(url) {
             if (tag.startsWith('H')) {
                 allContent.push({
                     type: 'header',
+                    level: parseInt(tag[1]),
                     text
                 });
             }
@@ -29,9 +30,9 @@ async function scrapeData(url) {
                     text
                 });
             }
-            else if (tag === 'LI'){
+            else if (tag === 'LI') {
                 allContent.push({
-                    type: 'List',
+                    type: 'list',
                     text
                 });
             }
@@ -39,6 +40,8 @@ async function scrapeData(url) {
 
         const result = {
             title: document.title,
+            url: location.href,
+            date: new Date().toLocaleString(),
             content: allContent
         }
         return result
