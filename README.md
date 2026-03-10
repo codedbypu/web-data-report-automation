@@ -4,9 +4,18 @@
 ## 📌 Concept
 ระบบดึงข้อมูลจากหน้าเว็บ และสร้างรายงาน PDF พร้อม ScreenShot บันทึกภาพหน้าเว็บ ณ เวลาที่ดึงข้อมูลไว้ ซึ่งสามารถนำไปต่อยอดในงาน Web Monitoring, Dashboard Logging และการเก็บข้อมูลเพื่อวิเคราะห์ในอนาคต
 
+## 🎯 Use Cases
+- Web Monitoring
+- Automated Report Generation
+- Dashboard Archiving
+- Website Evidence Collection
+
 ---
 
 ## 📸 Screenshots
+| Original Website | Generated PDF Report |
+|------------------|----------------------|
+| <img src="resource/ExampleScreenshot.png" width="450"/> | <img src="resource/ExamplePDF.png" width="450"/> |
 
 ---
 
@@ -51,6 +60,8 @@ Structured Data (JSON)
 
 ```text
 web-data-report-automation/
+│
+├─ resource/
 │
 ├─ src/
 │   ├─ scraper.js          # ดึงข้อมูลข้อความ
