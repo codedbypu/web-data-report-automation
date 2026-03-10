@@ -4,7 +4,7 @@ const { exportPDF } = require('./pdfGenerator');
 const { cap } = require('./screenshot');
 
 (async () => {
-    const url = 'https://www.missivemedia.com/blog/benefits-of-using-html5.html';
+    const url = process.argv[2] || 'https://www.iana.org/help/example-domains';
 
     const data = await scrapeData(url);
     console.log('Data: ' , data);
